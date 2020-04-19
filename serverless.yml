@@ -1,0 +1,16 @@
+service: selectel-balance-to-datadog
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-central-1
+  environment:
+    SELECTEL_TOKEN: YOUR-SELECTEL-TOKEN  # https://my.selectel.ru/profile/apikeys
+    DATADOG_API_KEY: YOUR-DATADOG-TOKEN  # https://app.datadoghq.eu/account/settings#api
+    DATADOG_API_HOST: app.datadoghq.eu
+
+functions:
+  update_balance:
+    handler: handler.update
+    events:
+      - schedule: rate(5 minutes)

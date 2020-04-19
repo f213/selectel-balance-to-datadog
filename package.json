@@ -1,0 +1,22 @@
+{
+  "name": "selectel-balance-to-datadog",
+  "version": "1.0.0",
+  "description": "Lambda function to upload selectel balance to datadog",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "sls deploy -s prod",
+    "dev": "nodemon run-local.js"
+  },
+  "author": "Fedor Borshev <fedor@borshev.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.3"
+  }
+}
